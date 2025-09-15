@@ -1,7 +1,7 @@
 FROM node:20
 ENV DB_HOST=mysql
 EXPOSE 8080
-RUN groupadd -S expense && useradd -S expense -G expense \
+RUN groupadd -r expense && useradd -r expense -g expense \
     && mkdir /opt/server \
     && chown expense:expense -R /opt/server
 WORKDIR /opt/server
