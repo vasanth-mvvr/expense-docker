@@ -9,3 +9,30 @@ To enter into the entry point
 ```
 docker run -it --entrypoint /bin/bash <image:tag>
 ```
+
+# **To remove cache**
+```
+docker system prune -a 
+```
+```
+docker builder prune  
+```
+```
+docker image prune 
+```
+# **To see intermediate layers running**
+```
+export DOCKER_BUILDKIT=0
+```
+
+# **To push the images **
+```
+docker login
+```
+* Rename the tag before push
+```
+docker tag <old image name> <new image name>
+```
+```
+docker push <image name>
+```
