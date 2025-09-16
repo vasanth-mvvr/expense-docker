@@ -2,7 +2,7 @@ FROM node:20.19.5-alpine
 ENV DB_HOST=mysql
 EXPOSE 8080
 
-RUN groupadd -S expense && useradd -S -G expense expense \
+RUN addgroup -S expense && adduser -S expense -G expense \
     && mkdir /opt/server \
     && chown expense:expense -R /opt/server
 
